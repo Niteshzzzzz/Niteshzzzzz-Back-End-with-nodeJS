@@ -1,0 +1,3 @@
+setx VAR_NAME "value"  =>  this command is used to create an environment variable.
+powershell -Command "REG DELETE HKCU\Environment /F /V VAR_NAME"  =>  this command is used to delete an environment variable permanently.
+num1=4390 node --inspect script.js  => this command is used to save env in a child process before execution on a file
