@@ -64,6 +64,17 @@ const userSchema = new Schema(
     toObject: {
       virtuals: true,
     },
+    methods: {
+      getUserSummary() {
+        return(`Your name is ${this.name} and you are ${this.age} years old.`)
+      }
+    },
+    statics: {
+      findByName(name) {
+        const user = this.findOne({name})
+        return user;
+      }
+    }
   }
 );
 
