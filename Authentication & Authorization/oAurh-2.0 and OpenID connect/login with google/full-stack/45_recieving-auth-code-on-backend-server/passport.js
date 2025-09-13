@@ -22,8 +22,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 const clientId =
-  "708565128148-kfe4aneo75f3gcb8qbioga46l39rp0d0.apps.googleusercontent.com";
-const clientSecret = "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";
+  "";
+const clientSecret = "";
 const redirectUrl = "http://localhost:4000/auth/google/callback";
 
 // google client setup
