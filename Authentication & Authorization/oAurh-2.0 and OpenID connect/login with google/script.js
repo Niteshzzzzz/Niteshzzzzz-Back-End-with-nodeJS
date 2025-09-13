@@ -2,7 +2,7 @@ const button = document.querySelector("button");
 
 const clientId =
   "";
-const clientSecret = "";
+
 // const redirectUrl = "http://127.0.0.2:5500/index.html";
 // const authUrl = "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=708565128148-kfe4aneo75f3gcb8qbioga46l39rp0d0.apps.googleusercontent.com&scope=openid email profile&redirect_uri=http://localhost:5500"
 
