@@ -4,7 +4,9 @@
         "dev": "node --watch app.js"
     },
     "dependencies": {
+        "dompurify": "^3.2.7",
         "express": "^5.1.0",
+        "jsdom": "^27.0.0",
         "mongoose": "^8.16.0"
     }
 }

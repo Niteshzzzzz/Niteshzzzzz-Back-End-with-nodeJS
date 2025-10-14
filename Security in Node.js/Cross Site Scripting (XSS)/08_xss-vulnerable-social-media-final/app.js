@@ -1,5 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
+import { JSDOM } from 'jsdom';
+import DOMPurify from 'dompurify';
+
+const window = new JSDOM('').window;
+const purify = DOMPurify(window);
 
 const app = express();
 
@@ -27,7 +32,10 @@ app.get("/posts", async (req, res) => {
 });
 
 app.post("/posts", async (req, res) => {
-  const post = new Post({ content: req.body.content });
+  const content = purify.sanitize(req.body.content);
+  console.log(req.body.content)
+  console.log(content)
+  const post = new Post({ content });
   await post.save();
   res.status(201).json(post);
 });

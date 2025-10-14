@@ -7,7 +7,7 @@ formPost.addEventListener("submit", async (e) => {
   await fetch("/posts", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ content }),
+    body: JSON.stringify({ content: DOMPurify.sanitize(content) }),
   });
   document.getElementById("content").value = "";
   loadPosts();
@@ -21,7 +21,7 @@ async function loadPosts() {
     .map(
       (p) => `
         <div class="bg-white p-4 mb-2 rounded shadow">
-          <p>${p.content}</p>
+          <p>${DOMPurify.sanitize(p.content)}</p>
           <small class="text-gray-500">${new Date(p.createdAt).toLocaleString()}</small>
         </div>`
     )
