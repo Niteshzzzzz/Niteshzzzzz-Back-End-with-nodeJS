@@ -2,7 +2,9 @@ import crypto from "crypto";
 
 // Replace with your credentials
 const accessKeyId = "AKIASDQRI4MWMXXEKEPQ";
-const secretAccessKey = "dOofld9XEBTcMpWPLt5csAWyCUy6GNU3rntWuNGc";
+// secretAccessKey = "";
+const sKey = "dOofld9XEBTcMpWPLt5csAWyCUy6GNU3rntWuNGc";
+
 const region = "ap-south-1";
 
 export function getSignedS3Url({
@@ -71,7 +73,7 @@ export function getSignedS3Url({
   const hmac = (key, data) =>
     crypto.createHmac("sha256", key).update(data).digest();
 
-  const dateKey = hmac("AWS4" + secretAccessKey, dateStamp);
+  const dateKey = hmac("AWS4" + sKey, dateStamp);
   const regionKey = hmac(dateKey, region);
   const serviceKey = hmac(regionKey, service);
   const signingKey = hmac(serviceKey, "aws4_request");
