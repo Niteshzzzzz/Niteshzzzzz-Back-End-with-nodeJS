@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-cloudfront": "^3.975.0",
+    "@aws-sdk/cloudfront-signer": "^3.978.0"
+  }
+}
