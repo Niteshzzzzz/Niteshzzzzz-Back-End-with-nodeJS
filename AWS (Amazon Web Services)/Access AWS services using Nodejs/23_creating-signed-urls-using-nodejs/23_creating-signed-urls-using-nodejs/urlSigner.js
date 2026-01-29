@@ -1,7 +1,7 @@
 import crypto from "crypto";
 
 // Replace with your credentials
-const accessKeyId = "AKIASDQRI4MWMXXEKEPQ";
+const accessKeyId = "";
 // secretAccessKey = "";
 const sKey = "";
 
