@@ -3,7 +3,7 @@ import crypto from "crypto";
 // Replace with your credentials
 const accessKeyId = "AKIASDQRI4MWMXXEKEPQ";
 // secretAccessKey = "";
-const sKey = "dOofld9XEBTcMpWPLt5csAWyCUy6GNU3rntWuNGc";
+const sKey = "";
 
 const region = "ap-south-1";
 
